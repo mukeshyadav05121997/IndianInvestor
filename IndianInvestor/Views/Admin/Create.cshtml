@@ -1,0 +1,25 @@
+﻿@model IndianInvestor.Models.AdminMV
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Upload Data</h1>
+
+
+<hr />
+            <form method="post" asp-controller="Admin" asp-action="Create" enctype="multipart/form-data">
+            <div class="container">
+                <input type="file" name="File">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            </form>
+       
+    
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

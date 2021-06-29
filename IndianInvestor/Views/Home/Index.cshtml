@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .down{
+        color:grey;
+    }
+    p {
+        color: orangered;
+        font-size: larger;
+    }
+    .row{
+        margin:auto;
+        padding:40px;
+    }
+   .span-1-of-3 {
+       text-align:right;
+    }
+   #cent{
+      left:2%;
+      
+     
+   }
+  .span-3-of-3{
+      float:right;
+      text-align:left;
+
+  }
+  .span-2-of-3{
+      text-align:right;
+
+  }
+  #imgs{
+      left:2%
+
+  }
+    #partnerimg {
+        top: 5%;
+        left:-15%;
+        
+       
+    }
+    #partnerdesc {
+        left: -50%;
+        top:-45%;
+    }
+  
+
+   
+
+    
+</style>
+
+
+
+<div class="text-center">
+    <br>
+  <p> <strong>What do you want to do?</strong></p>
+  <section class="description">
+      <div class="row span-1-of-2">
+
+          <div class="col span-1-of-3">
+              <h6 class="down">Invest in Smallcase</h6>
+              <h2><strong> Pehla Kadam</strong></h2>
+          </div>
+          <div id="cent" class="col span-2-of-3">
+              <img src="~/image/diary.png" width="100" height="100" />
+            
+          </div>
+          <div class="col span-3-of-3">
+              <h2><strong>What's happening in the<br>Stock Market </strong></h2>
+              <h6 class="down">Find out Here</h6>
+          </div>
+      </div>
+      <div class="row span-2-of-2">
+          <div class="col span-1-of-3">
+              <h6 class="down"> I want to</h6>
+              <h2><strong> Open the trading<br> Account</strong></h2>
+          </div>
+         
+          <div class="col span-2-of-3">
+              <div id="partnerimg" class="col span-1-of-2">
+                  <img id="partnerimg" src="~/image/partnerbus.png" width="100" height="100" />
+               </div>
+              <div  id ="partnerdesc"class="col span-2-of-2">
+                  <h2> <strong>Partner <br>with <br>us</strong></h2>
+              </div>
+                
+              </div>
+          <div class="col span-3-of-3">
+              <h2> <strong>Financial Education</strong></h2>
+              <h6 class="down"> Invest Early, To Acchive Fianacial Freedom</h6>
+          </div>
+          </div>
+
+  </section>
+  
+
+</div>

@@ -1,0 +1,113 @@
+﻿@model IEnumerable<IndianInvestor.Models.AdminMV>
+
+@{
+    ViewData["Title"] = "WatchMarket";
+}
+<p>* Data is updated at 8:00 AM on 28/06/2021</p>
+<h1>Market Summary</h1>
+
+<br>
+<style>
+    #tbldata {
+        background-color: antiquewhite;
+    }
+
+
+
+    p {
+        float: right;
+        color: darkgreen;
+        font-size: small;
+    }
+
+    .leftdiv {
+        background-color: crimson;
+        color: white;
+        float: left;
+    }
+
+    .middlediv {
+        background-color: crimson;
+        color: white;
+        float: left;
+    }
+
+    .rightdiv {
+        background-color: crimson;
+        color: white;
+        float: left;
+    }
+
+    .leftdiv, .middlediv, .rightdiv {
+        padding: 1%;
+        width: 33%;
+        border: solid black;
+    }
+</style>
+<body>
+
+    <div class="leftdiv">
+        <h3>Nifty 50</h3>
+        <h4>15730</h4>
+        <h5>-85</h5>
+    </div>
+    <div class="middlediv">
+        <h3>Sensex</h3>
+        <h4>52306</h4>
+        <h5>-282</h5>
+
+
+    </div>
+    <div class="rightdiv">
+        <h3>Doller</h3>
+        <h4>&#8377 74.32</h4>
+        <h5>-0.045</h5>
+
+
+    </div>
+
+</body>
+
+
+<h1>Stock Price</h1>
+<br>
+
+<table id="tbldata" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketCap)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MarketCap)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts{
+    <script>
+    $(document).ready(function (){
+    $('#tbldata').DataTable();
+    });
+    </script>
+}
